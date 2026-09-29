@@ -16,6 +16,7 @@ public class GitHubUserStatistics {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/vnd.github.v3+json");
+            conn.setRequestProperty("User-Agent", USER_NAME);
 
 
             if (conn.getResponseCode() != 200) {
